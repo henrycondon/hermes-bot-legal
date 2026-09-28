@@ -1,0 +1,125 @@
+:root {
+  color-scheme: light dark;
+  --bg: #fbfbf9;
+  --fg: #1c1b19;
+  --muted: #5f5c57;
+  --rule: #e3e0da;
+  --link: #8a4b1f;
+  --accent-bg: #f4f1ea;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #171614;
+    --fg: #e8e5df;
+    --muted: #a39e95;
+    --rule: #302e2a;
+    --link: #d99a63;
+    --accent-bg: #201e1b;
+  }
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  padding: 0 20px;
+  background: var(--bg);
+  color: var(--fg);
+  font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Roboto, Helvetica, Arial, sans-serif;
+  -webkit-text-size-adjust: 100%;
+}
+
+main {
+  max-width: 43rem;
+  margin: 0 auto;
+  padding: 4rem 0 6rem;
+}
+
+nav {
+  max-width: 43rem;
+  margin: 0 auto;
+  padding: 1.5rem 0 0;
+  font-size: .9rem;
+}
+
+nav a { margin-right: 1.25rem; }
+
+h1 {
+  font-size: 1.9rem;
+  line-height: 1.2;
+  margin: 0 0 .4rem;
+  letter-spacing: -.02em;
+}
+
+h2 {
+  font-size: 1.15rem;
+  margin: 2.5rem 0 .6rem;
+  letter-spacing: -.01em;
+}
+
+.meta {
+  color: var(--muted);
+  font-size: .9rem;
+  margin: 0 0 2.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--rule);
+}
+
+.lede {
+  font-size: 1.05rem;
+  color: var(--fg);
+}
+
+a { color: var(--link); text-decoration-thickness: 1px; text-underline-offset: 2px; }
+
+ul { padding-left: 1.2rem; }
+li { margin: .35rem 0; }
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+  font-size: .95rem;
+}
+
+th, td {
+  text-align: left;
+  padding: .6rem .75rem;
+  border-bottom: 1px solid var(--rule);
+  vertical-align: top;
+}
+
+th { font-weight: 600; }
+
+.box {
+  background: var(--accent-bg);
+  border: 1px solid var(--rule);
+  border-radius: 8px;
+  padding: 1rem 1.25rem;
+  margin: 1.5rem 0;
+}
+
+.box p { margin: .4rem 0; }
+
+footer {
+  max-width: 43rem;
+  margin: 0 auto;
+  padding: 1.5rem 0 3rem;
+  border-top: 1px solid var(--rule);
+  color: var(--muted);
+  font-size: .875rem;
+}
+
+code {
+  background: var(--accent-bg);
+  padding: .1em .35em;
+  border-radius: 4px;
+  font-size: .9em;
+}
+
+@media (max-width: 480px) {
+  main { padding: 2.5rem 0 4rem; }
+  h1 { font-size: 1.6rem; }
+  table { display: block; overflow-x: auto; }
+}
